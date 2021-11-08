@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reunion: MyString
+  name: MyString
+  year: MyString
+
+two:
+  reunion: MyString
+  name: MyString
+  year: MyString
