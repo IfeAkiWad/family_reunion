@@ -46,6 +46,6 @@ class ReunionsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def reunion_params
-      params.require(:reunion).permit(:name, :year)
+      params.require(:reunion).permit(:name, :year, :park_id, :person_id)
     end
 end
