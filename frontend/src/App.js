@@ -1,25 +1,25 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { connect } from 'react-redux'
+import { fetchParks } from './actions/parkAction';
+import { fetchReunions } from './actions/reunionAction';
+import { fetchPeople } from './actions/personAction'
+
+class App extends Component {
+  componentDidMount() {
+    this.props.fetchParks()
+    this.props.fetchPeople()
+    this.props.fetchReunions()
+  }
+
+  render() {
+    return (
+      <div>
+        
+      </div>
+    )
+  }
 }
 
-export default App;
+export default connect(null, { fetchReunions, fetchPeople, fetchParks })(App)

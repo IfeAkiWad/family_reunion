@@ -12,7 +12,7 @@ import axios from 'axios'
 //   };
 
   
-
+// attempting with axios
     export const fetchReunions = () => {
         return (dispatch) => {
             dispatch({ type: "LOADING_REUNIONS" });

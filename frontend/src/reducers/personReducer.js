@@ -3,13 +3,13 @@ const personReducer = (state = { people: [], loading: false }, action) => {
       case "LOADING_PEOPLE":
         return {
           ...state,
-          people: [...state.people],
+          people: [...state.people, action.payload],
           loading: true,
         };
       case "ADD_PEOPLE":
         return {
           ...state,
-          people: action.people,
+          people: action.payload,
           loading: false,
         };
       default:

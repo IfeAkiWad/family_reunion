@@ -3,13 +3,13 @@ const parkReducer = (state = { parks: [], loading: false }, action) => {
       case "LOADING_PARKS":
         return {
           ...state,
-          parks: [...state.parks],
+          parks: [...state.parks, action.payload],
           loading: true,
         };
       case "ADD_PARKS":
         return {
           ...state,
-          parks: action.parks,
+          parks: action.payload,
           loading: false,
         };
       default:
