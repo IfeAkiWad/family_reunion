@@ -9,6 +9,7 @@ import { fetchPeople } from './actions/personAction'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
+import About from './components/About';
  
 
 class App extends Component {
@@ -24,7 +25,8 @@ class App extends Component {
         <Router>
           <NavBar />
             <Routes>
-            <Route exact path="/" element={<Home />}/>
+            <Route path="/" element={<Home />} /> 
+            <Route path="/about" element={<About />}/>
             </Routes>
         </Router>
       </div>
