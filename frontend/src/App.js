@@ -10,6 +10,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Home from './components/Home';
 import About from './components/About';
+import ParkContainer from './containers/ParkContainer';
  
 
 class App extends Component {
@@ -27,6 +28,7 @@ class App extends Component {
             <Routes>
             <Route path="/" element={<Home />} /> 
             <Route path="/about" element={<About />}/>
+            <Route path="/test" element={<ParkContainer />}/>
             </Routes>
         </Router>
       </div>
