@@ -7,8 +7,8 @@ class ParkContainer extends Component {
         return (
             <div>
                 {console.log(this.props.allParks)}
-                 {this.props.allParks.map( parks => {
-                     return <ParkComponent key={parks.id} getPark={parks} />
+                 {this.props.allParks.map( (parks, index) => {
+                     return <ParkComponent key={index} getPark={parks} />
                  })}
             </div>
         )

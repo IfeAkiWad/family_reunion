@@ -4,7 +4,7 @@ const ParkComponent = (props) => {
     
     return (
         <div>
-            {props.park.name}
+            {props.getPark.name}
         </div>
     )
 }
